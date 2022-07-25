@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Protex Accountable Decryption Protocol
 
 You can use the [editor on GitHub](https://github.com/ADProtex/ADProtex.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
