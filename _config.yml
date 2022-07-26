@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
-title: "Portex: Accountable Decryption System using Trusted Hardware"
-description: "<Authors>"
+title: Portex
+description: Accountable Decryption System using Trusted Hardware
+show_downloads: true
+google_analytics:
