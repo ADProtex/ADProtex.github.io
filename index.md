@@ -44,17 +44,17 @@ Here we present the functions:
 
 ### Key Request
 
-<video src="media/keyreq.mkv" style="zoom: 35%;"></video>
+<video src="media/keyreq.mkv" style="zoom: 20%;" type="video/mp4"></video>
 
 ### Key Generation
 
-<video src="media/keygen.mkv" style="zoom: 35%;"></video>
+<video src="media/keygen.mkv" style="zoom: 20%;" type="video/webm"></video>
 
 ### Encryption
 
-<video src="media/encrypt.mkv" style="zoom: 35%;"></video>
+<video src="media/encrypt.mkv" style="zoom: 20%;"></video>
 
 ### Decryption
 
-<video src="media/decrypt.mkv" style="zoom: 35%;">
+<video src="media/decrypt.mkv" style="zoom: 20%;"></video>
 
