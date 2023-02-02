@@ -38,4 +38,23 @@ In **Portex**, four types of entities are involved: *private key generator* $\ma
 
 ## Implementation
 
-The implementation is published in [ADProtex/Protex (github.com)](https://github.com/ADProtex/Protex)
+The implementation is published in [Portex-tee/Portex (github.com)](https://github.com/Portex-tee/Portex)
+
+Here we present the functions:
+
+### Key Request
+
+<video src="media/keyreq.mkv" style="zoom: 35%;"></video>
+
+### Key Generation
+
+<video src="media/keygen.mkv" style="zoom: 35%;"></video>
+
+### Encryption
+
+<video src="media/encrypt.mkv" style="zoom: 35%;"></video>
+
+### Decryption
+
+<video src="media/decrypt.mkv" style="zoom: 35%;">
+
