@@ -118,8 +118,8 @@ Here we present the functions:
 
 
 
-<div class="container3">
-    <div class="row3">
+<div class="container">
+    <div class="row">
         <div class="video_box">
             <video class="video" controls="controls">
                 <source src="media/keyreq.mkv" type="video/mp4" />
@@ -135,7 +135,7 @@ Here we present the functions:
             <h3> Key Generation </h3>
         </div>
     </div>
-    <div class="row3">
+    <div class="row">
         <div class="video_box">
             <video class="video" controls="controls">
                 <source src="media/keyreq.mkv" type="video/mp4" />
