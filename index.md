@@ -50,8 +50,6 @@
     </style>
 </head>
 
-> 2022/7/26
-
 ## What is **Portex**?
 
 **Portex** is a novel accountable decryption system. We extend such a research direction: *using a trusted
