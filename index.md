@@ -19,7 +19,6 @@
         }
         .column3 {
             flex: 1;
-            background: brown;
             margin-left: 10px;
             margin-top: 10px;
         }
@@ -76,20 +75,12 @@ Here we present the functions:
 
 <div class="container3">
     <div class="row3">
-        <div class="column3">
-            <video width="600" height="400" src="media/keyreq.mkv"  type="video/mp4"><p></p></video>
-        </div>
-        <div class="column3">
-            <video width="600" height="400" src="media/keygen.mkv" type="video/mp4"><p></p></video>
-        </div>
+        <video class="column3"width="600" height="400" src="media/keyreq.mkv"  type="video/mp4"><p></p></video>
+        <video class="column3"width="600" height="400" src="media/keygen.mkv"  type="video/mp4"><p></p></video>
     </div>
     <div class="row3">
-        <div class="column3">
-            <video width="600" height="400" src="media/encrypt.mkv" type="video/mp4"><p></p></video>
-        </div>
-        <div class="column3">
-            <video width="600" height="400" src="media/decrypt.mkv" type="video/mp4"><p></p></video>
-        </div>
+        <video class="column3"width="600" height="400" src="media/encrypt.mkv"  type="video/mp4"><p></p></video>
+        <video class="column3"width="600" height="400" src="media/decrypt.mkv"  type="video/mp4"><p></p></video>
     </div>
 </div>
 
