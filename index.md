@@ -63,14 +63,12 @@ action of the key generation or key distribution accountable.
 
 - We propose a practical accountable cryptosystems, in which the users are accountable for their decryption. Each
   decryption will be faithfully recorded by the log maintainer, whose actions are publicly verifiable.
-
 - Our proposed scheme relies on TEE, but we further take consider the mainstream vulnerability of TEE that may leak the
   users' private keys and destroy accountability. We accordingly design a tracing mechanism to make trusted hardware,
   additionally, accountable for the private key generation and distribution.
 - We formalize the syntax and security definitions of **Portex**. The formal security analyses indicate that our system
   is provably secure, which satisfies the properties of *key privacy*, *fairness*, *completeness*, and *TEE
   traceability*.
-
 - We provide a full-functional implementation for **Portex** and evaluate performance in terms of *theoretical
   complexity*, *running time*, and *log size* for major functionalities. The experimental results demonstrate the
   feasibility and efficiency of our system.
