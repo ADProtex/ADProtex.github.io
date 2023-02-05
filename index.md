@@ -10,8 +10,8 @@
     </script>
     <style type="text/css">
         .container3 {
-            width: 400px;
-            height: 400px;
+            width: 1000px;
+            height: 1000px;
         }
         .row3 {
             display: flex;
@@ -84,38 +84,3 @@ Here we present the functions:
     </div>
 </div>
 
-[//]: # (<div class="container3">)
-
-[//]: # (    <div class="row3">)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (            <video width="600" height="400" src="media/keyreq.mkv"  type="video/mp4"><p></p></video>)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (            <video width="600" height="400" src="media/keygen.mkv" type="video/mp4"><p></p></video>)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (    </div>)
-
-[//]: # (    <div class="row3">)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (            <video width="600" height="400" src="media/encrypt.mkv" type="video/mp4"><p></p></video>)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (            <video width="600" height="400" src="media/decrypt.mkv" type="video/mp4"><p></p></video>)
-
-[//]: # (        <div class="column3"><p></p></div>)
-
-[//]: # (    </div>)
-
-[//]: # (</div>)
