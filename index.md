@@ -75,12 +75,24 @@ Here we present the functions:
 
 <div class="container3">
     <div class="row3">
-        <video class="column3"width="600" height="400" src="media/keyreq.mkv"  type="video/mp4"><p></p></video>
-        <video class="column3"width="600" height="400" src="media/keygen.mkv"  type="video/mp4"><p></p></video>
+        <video width="600" height="400" controls="controls">
+            <source src="media/keyreq.mkv" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <video width="600" height="400" controls="controls">
+            <source src="media/keygen.mkv" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
     </div>
     <div class="row3">
-        <video class="column3"width="600" height="400" src="media/encrypt.mkv"  type="video/mp4"><p></p></video>
-        <video class="column3"width="600" height="400" src="media/decrypt.mkv"  type="video/mp4"><p></p></video>
+        <video width="600" height="400" controls="controls">
+            <source src="media/encrypt.mkv" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <video width="600" height="400" controls="controls">
+            <source src="media/decrypt.mkv" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
     </div>
 </div>
 
