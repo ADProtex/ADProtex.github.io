@@ -9,13 +9,33 @@
         });
     </script>
     <style type="text/css">
-        .container3 {
-            width: 1000px;
-            height: 900px;
+        p {
+            height: 100%;
         }
-        .row3 {
+        /*方法3:flex*/
+        .container {
+            width: 1000px;
+            height: 1000px;
+        }
+        .row {
             display: flex;
             height: 50%;
+        }
+        .container2 {
+            width: 900px;
+            margin: 0 auto;
+        }
+        .card{
+            /* 設定父親定位點 */
+            position: relative;
+            width: 270px;
+            display: flex;
+            margin: 10px;
+        }
+        .image {
+            flex: 1;
+            height: 60px;
+            margin-right: 20px;
         }
         .video_box {
             flex: 1;
@@ -59,9 +79,21 @@ action of the key generation or key distribution accountable.
 
 ## People
 
-- 
+- Yuanzhao Li (Southern University of Science and Technology)
+- Rujia Li (Tsinghua University)
+- Qing Wang (Data61, CSIRO)
+- Sisi Duan (Tsinghua University)
+- Qi Wang (Southern University of Science and Technology)
+- Mark Ryan (University of Birmingham)
 
-
+<div class="container2">
+    <div class="card">
+        <img class="image" src="assets/sustech.png" alt="Southern University of Science and Technology">
+        <img class="image" src="assets/tsinghua.png" alt="Tsinghua University">
+        <img class="image" src="assets/DATA61.png" alt="Data61, CSIRO">
+        <img class="image" src="assets/uob.png" alt="University of Birmingham">
+    </div>
+</div>
 
 
 ## Designs
@@ -76,7 +108,7 @@ are responsible for detecting the wrongdoing of $\mathsf{CLIENTS}$ and the TEE-b
 idea behind **Portex** is to run $\mathsf{PKG}$ inside a TEE and force the action of key generation to render a public
 auditable log.
 
-<img src="assets/system-design.PNG" alt="image-20220726180341133" style="zoom: 40%;" />
+<img src="assets/system-design.PNG" alt="image-20220726180341133" style="zoom: 80%;" />
 
 ## Implementation
 
