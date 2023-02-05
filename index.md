@@ -11,16 +11,21 @@
     <style type="text/css">
         .container3 {
             width: 1000px;
-            height: 1000px;
+            height: 900px;
         }
         .row3 {
             display: flex;
             height: 50%;
         }
-        .column3 {
+        .video_box {
             flex: 1;
             margin-left: 10px;
             margin-top: 10px;
+            text-align: center;
+        }
+        .video_box .video {
+            width: 480px;
+            height: 320px;
         }
     </style>
 </head>
@@ -73,26 +78,39 @@ The implementation is published in [Portex-tee/Portex (github.com)](https://gith
 Here we present the functions:
 
 
+
 <div class="container3">
     <div class="row3">
-        <video width="480" height="320" controls="controls">
-            <source src="media/keyreq.mkv" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-        <video width="480" height="320" controls="controls">
-            <source src="media/keygen.mkv" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
+        <div class="video_box">
+            <video class="video" controls="controls">
+                <source src="media/keyreq.mkv" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <h3> Key Request </h3>
+        </div>
+        <div class="video_box">
+            <video class="video" controls="controls">
+                <source src="media/keyreq.mkv" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <h3> Key Generation </h3>
+        </div>
     </div>
     <div class="row3">
-        <video width="480" height="320" controls="controls">
-            <source src="media/encrypt.mkv" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-        <video width="480" height="320" controls="controls">
-            <source src="media/decrypt.mkv" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
+        <div class="video_box">
+            <video class="video" controls="controls">
+                <source src="media/keyreq.mkv" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <h3> Encryption </h3>
+        </div>
+        <div class="video_box">
+            <video class="video" controls="controls">
+                <source src="media/keyreq.mkv" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <h3> Decryption </h3>
+        </div>
     </div>
 </div>
 
