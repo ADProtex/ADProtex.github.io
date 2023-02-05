@@ -76,45 +76,55 @@ Here we present the functions:
 
 <div class="container3">
     <div class="row3">
-        <div class="column3"><p></p></div>
-        <div class="column3"><p></p></div>
+        <div class="column3">
+            <video width="600" height="400" src="media/keyreq.mkv"  type="video/mp4"><p></p></video>
+        </div>
+        <div class="column3">
+            <video width="600" height="400" src="media/keygen.mkv" type="video/mp4"><p></p></video>
+        </div>
     </div>
     <div class="row3">
-        <div class="column3"><p></p></div>
-        <div class="column3"><p></p></div>
+        <div class="column3">
+            <video width="600" height="400" src="media/encrypt.mkv" type="video/mp4"><p></p></video>
+        </div>
+        <div class="column3">
+            <video width="600" height="400" src="media/decrypt.mkv" type="video/mp4"><p></p></video>
+        </div>
     </div>
 </div>
 
-<div class="container3">
-    <div class="row3">
-        <div class="column3"><p></p></div>
-            <video width="450" height="300" src="media/keyreq.mkv"  type="video/mp4"><p></p></video>
-        <div class="column3"><p></p></div>
-        <div class="column3"><p></p></div>
-            <video width="450" height="300" src="media/keygen.mkv" type="video/mp4"><p></p></video>
-        <div class="column3"><p></p></div>
-    </div>
-    <div class="row3">
-        <div class="column3"><p></p></div>
-            <video width="450" height="300" src="media/encrypt.mkv" type="video/mp4"><p></p></video>
-        <div class="column3"><p></p></div>
-        <div class="column3"><p></p></div>
-            <video width="450" height="300" src="media/decrypt.mkv" type="video/mp4"><p></p></video>
-        <div class="column3"><p></p></div>
-    </div>
-</div>
+[//]: # (<div class="container3">)
 
-### Key Request
+[//]: # (    <div class="row3">)
 
-<video width="900" height="600" src="media/keyreq.mkv"  type="video/mp4"></video>
+[//]: # (        <div class="column3"><p></p></div>)
 
-### Key Generation
+[//]: # (            <video width="600" height="400" src="media/keyreq.mkv"  type="video/mp4"><p></p></video>)
 
-<video width="900" height="600" src="media/keygen.mkv" type="video/mp4"></video>
+[//]: # (        <div class="column3"><p></p></div>)
 
-### Encryption
+[//]: # (        <div class="column3"><p></p></div>)
 
-<video width="900" height="600" src="media/encrypt.mkv" type="video/mp4"></video>
+[//]: # (            <video width="600" height="400" src="media/keygen.mkv" type="video/mp4"><p></p></video>)
 
-### Decryption
+[//]: # (        <div class="column3"><p></p></div>)
 
+[//]: # (    </div>)
+
+[//]: # (    <div class="row3">)
+
+[//]: # (        <div class="column3"><p></p></div>)
+
+[//]: # (            <video width="600" height="400" src="media/encrypt.mkv" type="video/mp4"><p></p></video>)
+
+[//]: # (        <div class="column3"><p></p></div>)
+
+[//]: # (        <div class="column3"><p></p></div>)
+
+[//]: # (            <video width="600" height="400" src="media/decrypt.mkv" type="video/mp4"><p></p></video>)
+
+[//]: # (        <div class="column3"><p></p></div>)
+
+[//]: # (    </div>)
+
+[//]: # (</div>)
