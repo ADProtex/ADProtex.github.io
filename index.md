@@ -20,7 +20,7 @@
         .video_box {
             flex: 1;
             margin-left: 10px;
-            margin-top: 10px;
+            margin-bottom: 10px;
             text-align: center;
         }
         .video_box .video {
@@ -57,6 +57,13 @@ action of the key generation or key distribution accountable.
   complexity*, *running time*, and *log size* for major functionalities. The experimental results demonstrate the
   feasibility and efficiency of our system.
 
+## People
+
+- 
+
+
+
+
 ## Designs
 
 In **Portex**, four types of entities are involved: *private key generator* $\mathsf{PKG}$, a *log manager*
@@ -69,7 +76,7 @@ are responsible for detecting the wrongdoing of $\mathsf{CLIENTS}$ and the TEE-b
 idea behind **Portex** is to run $\mathsf{PKG}$ inside a TEE and force the action of key generation to render a public
 auditable log.
 
-<img src="assets/image-20220726180341133.png" alt="image-20220726180341133" style="zoom: 40%;" />
+<img src="assets/system-design.PNG" alt="image-20220726180341133" style="zoom: 40%;" />
 
 ## Implementation
 
@@ -113,4 +120,3 @@ Here we present the functions:
         </div>
     </div>
 </div>
-
