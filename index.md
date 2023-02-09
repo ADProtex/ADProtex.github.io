@@ -14,8 +14,8 @@
         }
         /*方法3:flex*/
         .container {
-            width: 1000px;
-            height: 1500px;
+            width: 900px;
+            height: 800px;
         }
         .row {
             display: flex;
@@ -44,8 +44,8 @@
             text-align: center;
         }
         .video_box .video {
-            width: 480px;
-            height: 320px;
+            width: 420px;
+            height: 290px;
         }
     </style>
 </head>
