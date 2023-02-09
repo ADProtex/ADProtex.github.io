@@ -15,11 +15,11 @@
         /*方法3:flex*/
         .container {
             width: 900px;
-            height: 800px;
+            height: 1200px;
         }
         .row {
             display: flex;
-            height: 50%;
+            height: 30%;
         }
         .container2 {
             width: 900px;
@@ -106,8 +106,6 @@ auditable log.
 The implementation is published in [Portex-tee/Portex (github.com)](https://github.com/Portex-tee/Portex)
 
 Here we present the functions:
-
-
 
 <div class="container">
     <div class="row">
