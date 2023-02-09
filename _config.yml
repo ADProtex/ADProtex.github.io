@@ -1,4 +1,5 @@
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
+remote_theme: Huxpro/huxblog-boilerplate
 title: Portex
 description: Accountable Decryption System using Trusted Hardware
 show_downloads: true
