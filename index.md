@@ -52,12 +52,7 @@
 
 ## What is **Portex**?
 
-**Portex** is a novel accountable decryption system. We extend such a research direction: *using a trusted
-hardware-based log to make decryption accountable*, but we consider the risk of the compromised trusted hardware and
-introduce a tracing mechanism. In our scheme, the decryption key is sealed in the trusted hardware (e.g., Trusted
-Execution Environment), and each decryption will trigger an automatic update of the transparent log. Then, a tracer can
-check the log to show evidence of users' misbehaviours of decryption. Meanwhile, the tracing mechanism ensures TEE's
-action of the key generation or key distribution accountable.
+Accountability provides a fundamental **after-the-fact** approach to detecting and possibly punishing illegal actions in cryptosystems. However, making decryption accountable is tricky. The decryption is normally conducted by end-users locally, where a decrypter may refuse to provide auditable information on his decryption. In this paper, we propose a novel accountable decryption system, called **Portex** using trusted hardware. Each decryption is forced to generate a publicly verifiable log, making the user's decryption accountable. Meanwhile, we introduce a tracing mechanism to guarantee that the attacks on trusted hardware are traceable. The formal model, security analysis, and prototype implementation as well as comprehensive evaluations demonstrate that our scheme is provably secure and practically feasible.
 
 ## Contributions
 
@@ -134,17 +129,33 @@ Here we present the functions:
     <div class="row">
         <div class="video_box">
             <video class="video" controls="controls">
-                <source src="media/keyreq.mkv" type="video/mp4" />
+                <source src="media/encrypt.mkv" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <h3> Encryption </h3>
         </div>
         <div class="video_box">
             <video class="video" controls="controls">
-                <source src="media/keyreq.mkv" type="video/mp4" />
+                <source src="media/decrypt.mkv" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <h3> Decryption </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="video_box">
+            <video class="video" controls="controls">
+                <source src="media/logtrace.mkv" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <h3> Log Trace </h3>
+        </div>
+        <div class="video_box">
+            <video class="video" controls="controls">
+                <source src="media/teeinspect.mkv" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <h3> TEE Inspect </h3>
         </div>
     </div>
 </div>
