@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Picnic CSS Testing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+    <meta name="keywords" content="css, library, picnic, picnicss, light">
+    <meta name="description" content="A lightweight CSS library">
+    <link rel="stylesheet" href="vendor/css/picnic.min.css">
+    <link rel="stylesheet" href="vendor/css/fontello.css">
+    <link rel="stylesheet" media="bogus">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/demo.css">
+
+    <style>
+        .intro {
+            padding: 10px;
+            max-width: 960px;
+            width: 100%;
+            margin: 100px auto 500px;
+        }
+
+        a.top {
+            font-size: 0;
+            position: fixed;
+            bottom: 0;
+            right: 40px;
+            font-weight: bold;
+            width: 40px;
+            padding: .3em 0;
+            margin-bottom: 0;
+            border-radius: .3em .3em 0 0;
+            transition: all .3s ease;
+        }
+
+        a.top.visible {
+            font-size: 1em;
+        }
+
+        .myCoolButton {
+            background: green;
+        }
+
+        .mainButton {
+            font-size: 1.5em;
+        }
+
+        .shyButton {
+            font-size: .75em;
+        }
+
+        .miniprofile {
+            border-radius: 50%; /* Make it a circle */
+            margin: 0 auto; /* Center horizontally */
+            width: 30%; /* 60% width */
+            height: 100px;
+            padding-bottom: 30%; /* 60% height */
+        }
+
+        .flex.demo > * > * {
+            display: block;
+            padding: .3em 0;
+            background: #2ecc40;
+            text-align: center;
+        }
+
+        .flex.demo > *:nth-child(2n) > * {
+            background: #7fdbff;
+        }
+    </style>
+
+</head>
+
+<body>
+<nav>
+    <!--
+    <a href="/" class="brand">
+        <img class="logo" src="img/basket.png"/>
+        <span>Picnic CSS</span>
+    </a>-->
+
+    <input id="bmenu" type="checkbox" class="show">
+    <label for="bmenu" class="burger toggle pseudo button">&#9776;</label>
+
+
+    <div class="menu">
+
+        <a href="/tests" class="pseudo button icon-help-circled">Test</a>
+        <a href="" target="_blank"
+           class="pseudo button icon-g">GitHub</a>
+
+        <a href="/documentation"
+           class="button icon-file-code">Code</a>
+    </div>
+</nav>
+
+
+<main class="intro test" id="home">
+
+        <h1 style = "margin:0"> Accountable Decryption System using Trusted Hardware
+        </h1>
+
+		<div class="flex demo">
+			<div><span style = "background:#fff">Yuanzhao Li, Rujia Li, Qing Wang, Sisi Duan, Qi Wang, Mark Ryan</span></div>
+		</div>
+
+
+        <h2>What is Portex?</h2>
+        <p>Accountability provides a fundamental after-the-fact approach to detecting and possibly punishing illegal actions in cryptosystems. However, making decryption accountable is tricky. The decryption is normally conducted by end-users locally, where a decrypter may refuse to provide auditable information on his decryption. In this paper, we propose a novel accountable decryption system, called Portex using trusted hardware. Each decryption is forced to generate a publicly verifiable log, making the user’s decryption accountable. Meanwhile, we introduce a tracing mechanism to guarantee that the attacks on trusted hardware are traceable. The formal model, security analysis, and prototype implementation as well as comprehensive evaluations demonstrate that our scheme is provably secure and practically feasible.
+        </p>
+
+		<h2>Designs</h2>
+
+		<p>In Portex, four types of entities are involved: private key generator PKG
+, a log manager LM
+, and user clients CLIENTS
+ and tracers TRACERS
+. The PKG
+ is required to run inside TEEs. The log manager and users’ platforms do not necessarily to support TEEs. Similar to the standard IBE system, the PKG
+ is responsible for generating the public parameters and extracting and distributing the user’s private key. User clients CLIENTS
+ are used to perform the decryption of ciphertext. The LM
+ updates and stores the logs when PKG
+ distributes a private key. TRACERS
+ that any roles can serve are responsible for detecting the wrongdoing of CLIENTS
+ and the TEE-based PKG
+ and users. The main idea behind Portex is to run PKG
+ inside a TEE and force the action of key generation to render a public auditable log.</p>
+
+   <p><br></p>
+
+    <div class="flex one">
+        <div>
+            <img class="stack" src="img/system-design.png">
+        </div>
+    </div>
+
+    <table class="primary">
+        <thead>
+        <tr>
+            <th>Contributions</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>We propose a practical accountable cryptosystems, in which the users are accountable for their decryption. Each decryption will be faithfully recorded by the log maintainer, whose actions are publicly verifiable.
+</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+<h2>Demonstration</h2>
+<p>The implementation is published in Portex-tee/Portex (github.com) Here we present the functions:</p>
+
+<div class="wrapper">
+
+  <div class="cols">
+
+
+			<div class="col">
+
+            <embed src="media/keyreq.mp4" allowfullscreen="true"  width = "100%">
+			<span>Key Request</span>
+
+			</div>
+
+
+
+			<div class="col">
+
+            <embed src="media/keygen.mp4" allowfullscreen="true"  width = "100%">
+			<span>Key Generation</span>
+
+			</div>
+
+
+			<div class="col">
+
+            <embed src="media/encrypt.mp4" allowfullscreen="true"  width = "100%">
+			<span>Encryption</span>
+
+			</div>
+
+
+
+			<div class="col">
+
+            <embed src="media/decrypt.mp4" allowfullscreen="true"  width = "100%">
+			<span>Decryption</span>
+
+			</div>
+
+
+
+			<div class="col">
+
+            <embed src="media/logtrace.mp4" allowfullscreen="true"  width = "100%">
+			<span>Log Trace</span>
+
+			</div>
+
+
+			<div class="col">
+
+            <embed src="media/teeinspect.mp4" allowfullscreen="true"  width = "100%">
+			<span>TEE Inspect</span>
+
+			</div>
+
+
+
+
+    </div>
+ </div>
+
+
+
+	<h2>Special Thanks to</h2>
+
+	 <div class="flex four">
+        <div>
+            <img class="stack" src="img/sustech_800x250.png">
+            <a class="stack button">SUSTech</a>
+        </div>
+        <div>
+            <img class="stack" src="img/tsinghua_800x250.png">
+            <a class="stack button">Tsinghua</a>
+        </div>
+        <div>
+            <img class="stack" src="img/DATA61_800x250.png">
+            <a class="stack button">Data61</a>
+        </div>
+        <div>
+            <img class="stack" src="img/uob_800x250.png">
+            <a class="stack button">UoB</a>
+        </div>
+    </div>
+
+
+
+
+</main>
+
+</body>
+
+
+</html>
