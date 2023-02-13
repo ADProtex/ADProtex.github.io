@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
 
-    <meta name="keywords" content="css, library, picnic, picnicss, light">
-    <meta name="description" content="A lightweight CSS library">
+    <meta name="keywords" content="Decryption, ">
+    <meta name="description" content="Accountable Decryption System using Trusted Hardware">
     <link rel="stylesheet" href="vendor/css/picnic.min.css">
     <link rel="stylesheet" href="vendor/css/fontello.css">
     <link rel="stylesheet" media="bogus">
@@ -76,19 +76,18 @@
 
 <body>
 <nav>
-    <!--
     <a href="/" class="brand">
-        <img class="logo" src="img/basket.png"/>
-        <span>Picnic CSS</span>
-    </a>-->
+        <img class="logo" src="img/logo.png"/>
+        <span>Portex</span>
+    </a>
 
     <input id="bmenu" type="checkbox" class="show">
     <label for="bmenu" class="burger toggle pseudo button">&#9776;</label>
 
 
     <div class="menu">
-
-        <a href="" class="pseudo button icon-help-circled">Portex</a>
+        <!--icon-help-circled-->
+        <a href="" class="pseudo button ">Paper</a>
 
         <a href="https://github.com/Portex-tee/PortexPage" target="_blank"
            class="pseudo button icon-g">GitHub</a>
@@ -103,56 +102,82 @@
 
         <h1 style = "margin:0"> Accountable Decryption System using Trusted Hardware
         </h1>
-
+		
 		<div class="flex demo">
-			<div><span style = "background:#fff">Yuanzhao Li, Rujia Li, Qing Wang, Sisi Duan, Qi Wang, Mark Ryan</span></div>
+			<div>
+			<span style = "background:#fff">
+			<a href="https://cryptosus.tech/members/liyz.html#master-stud">Yuanzhao Li</a>, 
+			<a href="https://rujia.uk/">Rujia Li</a>, 
+			<a href="https://qinwang.tech/">Qing Wang</a>, 
+			<a href="https://eee.sustech.edu.cn/p/wangqi/">Qi Wang</a>, 
+			<a href="http://people.ias.tsinghua.edu.cn/duansisi/en/index.htm">Sisi Duan</a>, 
+			<a href="https://www.cs.bham.ac.uk/~mdr/ ">Mark Ryan</a>
+			</span>
+			</div>
 		</div>
 
-
         <h2>What is Portex?</h2>
-        <p>Accountability provides a fundamental after-the-fact approach to detecting and possibly punishing illegal actions in cryptosystems. However, making decryption accountable is tricky. The decryption is normally conducted by end-users locally, where a decrypter may refuse to provide auditable information on his decryption. In this paper, we propose a novel accountable decryption system, called Portex using trusted hardware. Each decryption is forced to generate a publicly verifiable log, making the user’s decryption accountable. Meanwhile, we introduce a tracing mechanism to guarantee that the attacks on trusted hardware are traceable. The formal model, security analysis, and prototype implementation as well as comprehensive evaluations demonstrate that our scheme is provably secure and practically feasible.
-        </p>
-
-		<h2>Designs</h2>
-
-		<p>In Portex, four types of entities are involved: private key generator PKG
-, a log manager LM
-, and user clients CLIENTS
- and tracers TRACERS
-. The PKG
- is required to run inside TEEs. The log manager and users’ platforms do not necessarily to support TEEs. Similar to the standard IBE system, the PKG
- is responsible for generating the public parameters and extracting and distributing the user’s private key. User clients CLIENTS
- are used to perform the decryption of ciphertext. The LM
- updates and stores the logs when PKG
- distributes a private key. TRACERS
- that any roles can serve are responsible for detecting the wrongdoing of CLIENTS
- and the TEE-based PKG
- and users. The main idea behind Portex is to run PKG
- inside a TEE and force the action of key generation to render a public auditable log.</p>
-
-   <p><br></p>
-
-    <div class="flex one">
-        <div>
-            <img class="stack" src="img/system-design.png">
-        </div>
-    </div>
-
+		<div class="flex one">
+			
+			<p>Accountability provides a fundamental after-the-fact approach to detecting and possibly punishing illegal actions in cryptosystems. 
+			However, making decryption accountable is tricky. 
+			The decryption is normally conducted by end-users locally, where a decrypter may refuse to provide auditable information on his decryption. 
+			In this project, we make decryption accountable by using trusted hardware. 
+			Each decryption is forced to generate a publicly verifiable log, making the user’s decryption accountable. 
+			Meanwhile, we introduce a tracing mechanism to guarantee that the attacks on trusted hardware are traceable.
+			</p>
+		</div>
+	
+	<h2>Highlights</h2>
+	<div class="flex one">
     <table class="primary">
         <thead>
-        <tr>
-            <th>Contributions</th>
-
-        </tr>
+        
+		<!--<tr>
+            <th>Highlights</th>
+        </tr>-->
         </thead>
         <tbody>
         <tr>
-            <td>We propose a practical accountable cryptosystems, in which the users are accountable for their decryption. Each decryption will be faithfully recorded by the log maintainer, whose actions are publicly verifiable.
-</td>
+            <td>1. We propose a practical accountable cryptosystems, in which the users are accountable for their decryption. Each decryption will be faithfully recorded by the log maintainer, whose actions are publicly verifiable.</td>
         </tr>
-
+		
+		<tr>
+            <td>2. Our proposed scheme relies on Trusted Execution Environment (TEE), but we further take consider the mainstream vulnerability of TEE that may leak the users’ private keys and destroy accountability. We accordingly design a tracing mechanism to make trusted hardware, additionally, accountable for the private key generation and distribution.</td>
+        </tr>
+		
+		<tr>
+            <td>
+			3. We formalize the syntax and security definitions of Portex. The formal security analyses indicate that our system is provably secure, which satisfies the properties of key privacy, fairness, completeness, and TEE traceability.
+			 </td>
+		<tr>
+		
+		<tr>
+            <td>
+			4. We provide a full-functional implementation for Portex and evaluate performance in terms of theoretical complexity, running time, and log size for major functionalities. The experimental results demonstrate the feasibility and efficiency of our system.
+			 </td>
+		<tr>
         </tbody>
     </table>
+	</div>
+	
+    <h2>Designs</h2>
+    <div class="flex one">
+	
+		<p>Four types of entities are involved: private key generator <strong>PKG:</strong>, a log manager <strong>LM:</strong>, <strong>CLIENT:</strong> and <strong>TRACER:</strong>
+. The PKG is required to run inside TEEs. The log manager and users’ platforms do not necessarily to support TEEs.  The main idea behind Portex is to run PKG
+ inside a TEE and force the action of key generation to render a public auditable log.</p>
+ 
+        <div>
+            <img class="stack" src="img/system-design2.png">
+        </div>
+		  <dl>
+		  <dt>-<strong>PKG:</strong> The PKG is responsible for generating and distributing CLIENTS’s private key.</dt>  
+		  <dt>-<strong>LM:</strong> The LM updates and stores the logs when PKG distributes a private key.</dt>  
+		  <dt>-<strong>CLIENT:</strong> User CLIENT is used to perform the decryption of a ciphertext.</dt>
+		  <dt>-<strong>TRACER:</strong> TRACER is responsible for detecting the wrongdoing of CLIENTS and PKG.</dt>
+		  </dl>
+	  </div>
 
 <h2>Demonstration</h2>
 <p>The implementation is published in Portex-tee/Portex (github.com) Here we present the functions:</p>
@@ -165,7 +190,7 @@
 			<div class="col">
 
             <embed src="media/keyreq.mp4" allowfullscreen="true"  width = "100%">
-			<span>Key Request</span>
+			<span>Loads the PKG into the generation enclave (GE) for generating the public parameters and the master private keys.</span>
 
 			</div>
 
@@ -174,7 +199,7 @@
 			<div class="col">
 
             <embed src="media/keygen.mp4" allowfullscreen="true"  width = "100%">
-			<span>Key Generation</span>
+			<span>When a user attempts to get a private key, the client sends a key request to the log manager.</span>
 
 			</div>
 
@@ -182,7 +207,7 @@
 			<div class="col">
 
             <embed src="media/encrypt.mp4" allowfullscreen="true"  width = "100%">
-			<span>Encryption</span>
+			<span>If the user’s identity is valid, the log manager updates the log tree, generates and sends a set of proofs to PKG.</span>
 
 			</div>
 
@@ -243,6 +268,13 @@
 
 
 
+	<footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/Portex-tee/Portex">Portex</a> is maintained by <a href="https://github.com/Portex-tee">Portex-tee</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+	  
 
 </main>
 
