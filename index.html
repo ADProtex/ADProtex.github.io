@@ -179,6 +179,35 @@ Meanwhile, we have noticed the risk of the compromised TEE. We further introduce
 		  <dt>-<strong>TRACER:</strong> The TRACER is responsible for detecting the wrongdoing of CLIENT and PKG.</dt>
 		  </dl>
 	</div>
+	
+<h2>Applications</h2>
+ <div class="flex two">
+  <div>
+    <article class="card">
+      <header><h3>Accountable warrant execution</h3></header>
+      <section>
+        <p>It is common for the government or law enforcement who holds court-issued warrants to access the data from citizens.
+		However, the granted warrant might be abused, or malicious officials may access users' information with a false warrant that is 
+		out of the permitted scope. Our system makes decryption accountable, allowing public verification for users' decryption 
+		and preventing warrants from being used in an unsafe way.</p>
+		
+      </section>
+	  <img src="img/warrant.jpg">
+    </article>
+  </div>
+  <div>
+    <article class="card">
+	  <header><h3>Privacy-preserving delivery</h3></header>
+      <section>
+        <p>Existing package delivery solutions have a severe information leakage problem, since shares transmitting exposes sensitive information 
+		like the name and address in plaintext. With our system, such pieces of information will be tagged as the encrypted barcode, 
+		and the corresponding confidential information can only be accessed by a specific barcode reader with the log remaining to be audited. 
+		The accountability mechanism ensures that exceptional access is not abused.</p>
+      </section>
+	  <img src="img/delivery.jpeg">
+    </article>
+  </div>
+</div>
 
 <h2>Demonstration</h2>
 <p>The implementation is published in Portex-tee/Portex (github.com) Here we present the functions:</p>
@@ -238,40 +267,22 @@ Meanwhile, we have noticed the risk of the compromised TEE. We further introduce
     </div>
  </div>
  
- <br>
- 
- <h2>Applications</h2>
- <div class="flex two">
-  <div>
-    <article class="card">
-      <header><h3>Accountable warrant execution</h3></header>
-      <section>
-        <p>It is common for the government or law enforcement who holds court-issued warrants to access the data from citizens.
-		However, the granted warrant might be abused, or malicious officials may access users' information with a false warrant that is 
-		out of the permitted scope. Our system makes decryption accountable, allowing public verification for users' decryption 
-		and preventing warrants from being used in an unsafe way.</p>
-		
-      </section>
-	  <img src="img/warrant.jpg">
-    </article>
-  </div>
-  <div>
-    <article class="card">
-	  <header><h3>Privacy-preserving delivery</h3></header>
-      <section>
-        <p>Existing package delivery solutions have a severe information leakage problem, since shares transmitting exposes sensitive information 
-		like the name and address in plaintext. With our system, such pieces of information will be tagged as the encrypted barcode, 
-		and the corresponding confidential information can only be accessed by a specific barcode reader with the log remaining to be audited. 
-		The accountability mechanism ensures that exceptional access is not abused.</p>
-      </section>
-	  <img src="img/delivery.jpeg">
-    </article>
-  </div>
-</div>
-
 <br>
 
-<h2>Special Thanks to</h2>
+<h2>Acknowledgements</h2>
+
+<div class="flex one">
+ <section>
+ Rujia Li and Sisi Duan were supported in part by National Key
+R&D Program of China under grant No. 2022YFB2701700 and National Science Foundation of China under grant No. 92267203. Yuanzhao Li and Qi
+Wang were supported by Guangdong Provincial Key Laboratory
+(Grant No. 2020B121201001). Rujia Li was also supported by postdoctoral fellowships from the Tsinghua Shuimu Scholar.
+We also gratefully acknowledge financial support from EPSRC under grants
+EP/V000454/1 (CAP-TEE: Capability Architectures
+for Trusted Execution); EP/S030867/1 (SIPP - Secure IoT Processor Platform with Remote Attestation);
+and EP/R012598/1 (User-Controlled Hardware Security. Anchors: Evaluation and Designs).
+ </section>    
+</div>
 
  <div class="flex four">
 	<div>
@@ -292,11 +303,16 @@ Meanwhile, we have noticed the risk of the compromised TEE. We further introduce
 	</div>
 </div>
 
-	<footer>
-		<div class="text-center w-100">
-			<span>Copyright &copy;2023 <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>. All rights reserved.</span>
-		</div>
-	</footer>
+
+
+
+
+
+<footer>
+	<div class="text-center w-100">
+		<span>Copyright &copy;2023 <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>. All rights reserved.</span>
+	</div>
+</footer>
 	  
 </main>
 
