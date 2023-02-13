@@ -70,6 +70,10 @@
         .flex.demo > *:nth-child(2n) > * {
             background: #7fdbff;
         }
+		
+		.text-center{
+		  text-align: center!important;
+		}
     </style>
 
 </head>
@@ -119,12 +123,11 @@
         <h2>What is Portex?</h2>
 		<div class="flex one">
 			
-			<p>Accountability provides a fundamental after-the-fact approach to detecting and possibly punishing illegal actions in cryptosystems. 
-			However, making decryption accountable is tricky. 
-			The decryption is normally conducted by end-users locally, where a decrypter may refuse to provide auditable information on his decryption. 
-			In this project, we make decryption accountable by using trusted hardware. 
-			Each decryption is forced to generate a publicly verifiable log, making the user’s decryption accountable. 
-			Meanwhile, we introduce a tracing mechanism to guarantee that the attacks on trusted hardware are traceable.
+			<p>Accountability provides a fundamental after-the-fact approach to detecting and punishing illegal actions in cryptosystems. 
+However, making decryption accountable is tricky. 
+The decryption is normally conducted by end-users locally, where a decrypter may refuse to provide auditable information on his decryption. 
+Portex solves this issue by using <a href="https://en.wikipedia.org/wiki/Trusted_execution_environment"> Trusted Execution Environment (TEE)</a>-based publicly verifiable log. Each decryption is forced to generate a log, making decryption accountable. 
+Meanwhile, we have noticed the risk of the compromised TEE. We further introduce a tracing mechanism to inspect the TEE's behaviors to guarantee that the attacks on trusted hardware are traceable.
 			</p>
 		</div>
 	
@@ -143,7 +146,7 @@
         </tr>
 		
 		<tr>
-            <td>2. Our proposed scheme relies on Trusted Execution Environment (TEE), but we further take consider the mainstream vulnerability of TEE that may leak the users’ private keys and destroy accountability. We accordingly design a tracing mechanism to make trusted hardware, additionally, accountable for the private key generation and distribution.</td>
+            <td>2. Our proposed scheme relies on TEE, but we further take consider the mainstream vulnerability of TEE that may leak the users’ private keys and destroy accountability. We accordingly design a tracing mechanism to make trusted hardware, additionally, accountable for the private key generation and distribution.</td>
         </tr>
 		
 		<tr>
@@ -163,21 +166,19 @@
 	
     <h2>Designs</h2>
     <div class="flex one">
-	
-		<p>Four types of entities are involved: private key generator <strong>PKG:</strong>, a log manager <strong>LM:</strong>, <strong>CLIENT:</strong> and <strong>TRACER:</strong>
+		<p>Four types of entities are involved: private key generator <strong>PKG</strong>, a log manager <strong>LM</strong>, <strong>CLIENT</strong> and <strong>TRACER</strong>
 . The PKG is required to run inside TEEs. The log manager and users’ platforms do not necessarily to support TEEs.  The main idea behind Portex is to run PKG
  inside a TEE and force the action of key generation to render a public auditable log.</p>
- 
         <div>
             <img class="stack" src="img/system-design2.png">
         </div>
 		  <dl>
-		  <dt>-<strong>PKG:</strong> The PKG is responsible for generating and distributing CLIENTS’s private key.</dt>  
-		  <dt>-<strong>LM:</strong> The LM updates and stores the logs when PKG distributes a private key.</dt>  
-		  <dt>-<strong>CLIENT:</strong> User CLIENT is used to perform the decryption of a ciphertext.</dt>
-		  <dt>-<strong>TRACER:</strong> TRACER is responsible for detecting the wrongdoing of CLIENTS and PKG.</dt>
+		  <dt>-<strong>PKG:</strong> The PKG is responsible for generating and distributing CLIENT’s private key.</dt>  
+		  <dt>-<strong>LM:</strong> The LM updates and stores the logs when the PKG distributes a private key.</dt>  
+		  <dt>-<strong>CLIENT:</strong> The CLIENT performs the decryption of a ciphertext.</dt>
+		  <dt>-<strong>TRACER:</strong> The TRACER is responsible for detecting the wrongdoing of CLIENT and PKG.</dt>
 		  </dl>
-	  </div>
+	</div>
 
 <h2>Demonstration</h2>
 <p>The implementation is published in Portex-tee/Portex (github.com) Here we present the functions:</p>
@@ -189,93 +190,114 @@
 
 			<div class="col">
 
-            <embed src="media/keyreq.mp4" allowfullscreen="true"  width = "100%">
-			<span>Loads the PKG into the generation enclave (GE) for generating the public parameters and the master private keys.</span>
+            <!--<embed src="media/keyreq.mp4" allowfullscreen="true"  width = "100%">-->
+			<iframe style="border: 3px solid #EEE;  width: 100%; max-width: 50em; height: 100%;" src="media/keyreq.mp4" loading="lazy" ></iframe>
+			<span>Key Request</span>
+
+			</div>
+			<div class="col">
+
+            <!--<embed src="media/keygen.mp4" allowfullscreen="true"  width = "100%">-->
+			<iframe style="border: 3px solid #EEE;  width: 100%; max-width: 50em; height: 100%;" src="media/keygen.mp4" loading="lazy" ></iframe>
+			<span>Ken Generation.</span>
 
 			</div>
 
 
-
 			<div class="col">
 
-            <embed src="media/keygen.mp4" allowfullscreen="true"  width = "100%">
-			<span>When a user attempts to get a private key, the client sends a key request to the log manager.</span>
+            <!--<embed src="media/encrypt.mp4" allowfullscreen="true"  width = "100%">-->
+			<iframe style="border: 3px solid #EEE;  width: 100%; max-width: 50em; height: 100%;" src="media/encrypt.mp4" loading="lazy" ></iframe>
+			<span>Encryption</span>
 
 			</div>
 
-
 			<div class="col">
 
-            <embed src="media/encrypt.mp4" allowfullscreen="true"  width = "100%">
-			<span>If the user’s identity is valid, the log manager updates the log tree, generates and sends a set of proofs to PKG.</span>
-
-			</div>
-
-
-
-			<div class="col">
-
-            <embed src="media/decrypt.mp4" allowfullscreen="true"  width = "100%">
+            <!--<embed src="media/decrypt.mp4" allowfullscreen="true"  width = "100%">-->
+			<iframe style="border: 3px solid #EEE;  width: 100%; max-width: 50em; height: 100%;" src="media/decrypt.mp4" loading="lazy" ></iframe>
 			<span>Decryption</span>
 
 			</div>
 
-
-
 			<div class="col">
 
-            <embed src="media/logtrace.mp4" allowfullscreen="true"  width = "100%">
+            <!--<embed src="media/logtrace.mp4" allowfullscreen="true"  width = "100%">-->
+			<iframe style="border: 3px solid #EEE; width: 100%; max-width: 50em; height: 100%;" src="media/logtrace.mp4" loading="lazy" ></iframe>
 			<span>Log Trace</span>
-
+			
 			</div>
 
 
 			<div class="col">
 
-            <embed src="media/teeinspect.mp4" allowfullscreen="true"  width = "100%">
+            <!--<embed src="media/teeinspect.mp4" allowfullscreen="true"  width = "100%"> title="This is test"-->
+			<iframe style="border: 3px solid #EEE;  width: 100%; max-width: 50em; height: 100%;" src="media/teeinspect.mp4" loading="lazy" ></iframe>
 			<span>TEE Inspect</span>
-
 			</div>
-
-
-
-
     </div>
  </div>
+ 
+ <br>
+ 
+ <h2>Applications</h2>
+ <div class="flex two">
+  <div>
+    <article class="card">
+      <header><h3>Accountable warrant execution</h3></header>
+      <section>
+        <p>It is common for the government or law enforcement who holds court-issued warrants to access the data from citizens.
+		However, the granted warrant might be abused, or malicious officials may access users' information with a false warrant that is 
+		out of the permitted scope. Our system makes decryption accountable, allowing public verification for users' decryption 
+		and preventing warrants from being used in an unsafe way.</p>
+		
+      </section>
+	  <img src="img/warrant.jpg">
+    </article>
+  </div>
+  <div>
+    <article class="card">
+	  <header><h3>Privacy-preserving delivery</h3></header>
+      <section>
+        <p>Existing package delivery solutions have a severe information leakage problem, since shares transmitting exposes sensitive information 
+		like the name and address in plaintext. With our system, such pieces of information will be tagged as the encrypted barcode, 
+		and the corresponding confidential information can only be accessed by a specific barcode reader with the log remaining to be audited. 
+		The accountability mechanism ensures that exceptional access is not abused.</p>
+      </section>
+	  <img src="img/delivery.jpeg">
+    </article>
+  </div>
+</div>
 
+<br>
 
+<h2>Special Thanks to</h2>
 
-	<h2>Special Thanks to</h2>
+ <div class="flex four">
+	<div>
+		<img class="stack" src="img/sustech_800x250.png">
+		<a class="stack button">SUSTech</a>
+	</div>
+	<div>
+		<img class="stack" src="img/tsinghua_800x250.png">
+		<a class="stack button">Tsinghua</a>
+	</div>
+	<div>
+		<img class="stack" src="img/DATA61_800x250.png">
+		<a class="stack button">Data61</a>
+	</div>
+	<div>
+		<img class="stack" src="img/uob_800x250.png">
+		<a class="stack button">UoB</a>
+	</div>
+</div>
 
-	 <div class="flex four">
-        <div>
-            <img class="stack" src="img/sustech_800x250.png">
-            <a class="stack button">SUSTech</a>
-        </div>
-        <div>
-            <img class="stack" src="img/tsinghua_800x250.png">
-            <a class="stack button">Tsinghua</a>
-        </div>
-        <div>
-            <img class="stack" src="img/DATA61_800x250.png">
-            <a class="stack button">Data61</a>
-        </div>
-        <div>
-            <img class="stack" src="img/uob_800x250.png">
-            <a class="stack button">UoB</a>
-        </div>
-    </div>
-
-
-
-	<footer class="site-footer">
-        
-          <span class="site-footer-owner"><a href="https://github.com/Portex-tee/Portex">Portex</a> is maintained by <a href="https://github.com/Portex-tee">Portex-tee</a>.</span>
-        
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
+	<footer>
+		<div class="text-center w-100">
+			<span>Copyright &copy;2023 <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>. All rights reserved.</span>
+		</div>
+	</footer>
 	  
-
 </main>
 
 </body>
